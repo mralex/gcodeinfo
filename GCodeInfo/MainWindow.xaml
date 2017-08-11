@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GCodeInfo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="GCodeInfo" Height="223" Width="156" MinWidth="280" MinHeight="320">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="timeLabel" Content="Print Time" Margin="10,41,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="filamentLabel" Content="Total Filament" Margin="10,72,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="widthLabel" Content="Model Width" Margin="10,103,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="heightLabel" Content="Model Height" Margin="10,134,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="depthLabel" Content="Model Depth" Margin="10,165,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label Content="Print Time" Margin="10,41,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label Content="Total Filament" Margin="10,72,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label Content="Model Width" Margin="10,103,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label Content="Model Height" Margin="10,134,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label Content="Model Depth" Margin="10,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Button x:Name="loadButton" Content="Load GCode" Margin="10" Grid.Row="1" Grid.ColumnSpan="2" Click="loadButtonClick"/>
+        <Label Content="File Name" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label x:Name="fileLabel" Content="File Name" Margin="10,10,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="layersLabel" Content="Layers" Margin="10,196,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26" HorizontalContentAlignment="Right"/>
+        <Label Content="Layers" Margin="10,196,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+
     </Grid>
 </Window>
